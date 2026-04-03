@@ -16,6 +16,7 @@ export default defineConfig({
       name: "insights",
       exposes: {
         "./app": "./src/exposed/app.tsx",
+        "./crashed": "./src/exposed/crashed.tsx",
       },
       shared: {
         react: {

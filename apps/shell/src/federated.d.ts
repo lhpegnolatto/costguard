@@ -9,3 +9,9 @@ declare module "insights/app" {
   const App: ComponentType;
   export default App;
 }
+
+declare module "insights/crashed" {
+  import type { ComponentType } from "react";
+  const Crashed: ComponentType;
+  export default Crashed;
+}
