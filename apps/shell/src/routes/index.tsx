@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
+import { RemoteSlot } from "@/components/remote-slot";
 
 const AnalyticsApp = lazy(() => import("analytics/app"));
 
@@ -9,12 +10,8 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <Suspense
-      fallback={
-        <p className="text-sm text-zinc-500">Loading analytics app..</p>
-      }
-    >
+    <RemoteSlot>
       <AnalyticsApp />
-    </Suspense>
+    </RemoteSlot>
   );
 }

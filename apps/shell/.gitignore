@@ -4,3 +4,4 @@
 # tanstack router
 routeTree.gen.ts
 routeTree.gen.d.ts
+.tanstack
