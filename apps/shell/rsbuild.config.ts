@@ -19,9 +19,9 @@ export default defineConfig({
       name: "costguard_shell",
       remotes: {
         costguard_analytics:
-          "costguard_analytics@http://localhost:3001/mf-manifest.json",
+          "costguard_analytics@http://localhost:3001/remoteEntry.json",
         costguard_insights:
-          "costguard_insights@http://localhost:3002/mf-manifest.json",
+          "costguard_insights@http://localhost:3002/remoteEntry.json",
       },
       shared: {
         react: {

@@ -14,6 +14,7 @@ export default defineConfig({
     pluginReact(),
     pluginModuleFederation({
       name: "costguard_insights",
+      filename: "remoteEntry.js",
       exposes: {
         "./app": "./src/exposed/app.tsx",
         "./crashed": "./src/exposed/crashed.tsx",
