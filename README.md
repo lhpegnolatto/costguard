@@ -2,6 +2,8 @@
 
 A small **sandbox** for experimenting with **Module Federation** and **Zephyr Cloud** in a multi-app setup. The UI looks like a FinOps-style dashboard, but that is only sample content—the goal here is tooling and integration patterns, not a real product.
 
+**Live demo:** [click here to see the demo](https://main-costguard-shell-costguard-lhpegnolatto-ze.zephyrcloud.app/)
+
 ---
 
 ## 🧠 Purpose
@@ -54,13 +56,13 @@ Each remote is loaded at runtime using Module Federation.
 
 I implemented a hybrid loading strategy to balance Initial Performance and System Fault Tolerance:
 
-- Analytics (Main Route): Loaded synchronously to prevent LCP (Largest Contentful Paint) issues. Since this is the primary dashboard, it must be available immediately.
-- Insights & Demo (Secondary): Loaded asynchronously using React.lazy and Suspense to reduce the initial bundle size of the Shell.
+- **Analytics (Main Route):** Loaded synchronously to prevent LCP (Largest Contentful Paint) issues. Since this is the primary dashboard, it must be available immediately.
+- **Insights & Demo (Secondary):** Loaded asynchronously using React.lazy and Suspense to reduce the initial bundle size of the Shell.
 
 And o prevent a "Single Point of Failure", I applied two layers of protection:
 
-- Error Boundaries: Every remote is wrapped in a guard. If a microfrontend crashes, the Shell remains interactive, showing a graceful fallback for that specific module.
-- Hybrid Retry Pattern: For async loads, I implemented both an automatic retry (to handle transient network blips) and an optional manual retry button in the UI, giving the user control to recover the module without refreshing the entire page.
+- **Error Boundaries:** Every remote is wrapped in a guard. If a microfrontend crashes, the Shell remains interactive, showing a graceful fallback for that specific module.
+- **Hybrid Retry Pattern:** For async loads, I implemented both an automatic retry (to handle transient network blips) and an optional manual retry button in the UI, giving the user control to recover the module without refreshing the entire page.
 
 ![Shell Screenshot](./docs/analytics.png)
 
