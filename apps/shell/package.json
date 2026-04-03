@@ -35,7 +35,7 @@
     "zephyr-rsbuild-plugin": "^0.2.0"
   },
   "zephyr:dependencies": {
-    "analytics": "workspace:*",
-    "insights": "workspace:*"
+    "analytics": "@costguard/analytics:latest",
+    "insights": "@costguard/insights:latest"
   }
 }

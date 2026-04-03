@@ -4,9 +4,6 @@ import { pluginReact } from "@rsbuild/plugin-react";
 import { tanstackRouter } from "@tanstack/router-plugin/rspack";
 import { withZephyr } from "zephyr-rsbuild-plugin";
 
-const ANALYTICS_REMOTE_URL = process.env.ANALYTICS_REMOTE_URL;
-const INSIGHTS_REMOTE_URL = process.env.INSIGHTS_REMOTE_URL;
-
 export default defineConfig({
   server: {
     port: 3000,
@@ -21,10 +18,17 @@ export default defineConfig({
     pluginModuleFederation({
       name: "shell",
       remotes: {
-        analytics: `analytics@${ANALYTICS_REMOTE_URL}/mf-manifest.json`,
-        insights: `insights@${INSIGHTS_REMOTE_URL}/mf-manifest.json`,
+        analytics: "analytics@http://localhost:3001/mf-manifest.json",
+        insights: "insights@http://localhost:3002/mf-manifest.json",
       },
-      shared: ["react", "react-dom"],
+      shared: {
+        react: {
+          singleton: true,
+        },
+        "react-dom": {
+          singleton: true,
+        },
+      },
     }),
     withZephyr(),
   ],
