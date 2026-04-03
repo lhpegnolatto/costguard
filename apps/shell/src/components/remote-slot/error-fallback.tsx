@@ -3,11 +3,13 @@ import { Button } from "@/components/ui/button";
 interface RemotesErrorFallbackProps {
   error: Error;
   onRetry?: () => void;
+  preventRetry?: boolean;
 }
 
 export function RemoteSlotErrorFallback({
   error,
   onRetry,
+  preventRetry = false,
 }: RemotesErrorFallbackProps) {
   const isDev = import.meta.env.DEV;
 
@@ -17,6 +19,10 @@ export function RemoteSlotErrorFallback({
       return;
     }
 
+    window.location.reload();
+  }
+
+  function handleRefresh() {
     window.location.reload();
   }
 
@@ -34,9 +40,37 @@ export function RemoteSlotErrorFallback({
           {error.message}
         </pre>
       ) : null}
-      <Button type="button" variant="outline" size="sm" onClick={handleRetry}>
-        Try again
-      </Button>
+      <div className="flex gap-2 justify-center items-center">
+        {preventRetry ? (
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={handleRefresh}
+          >
+            Refresh page
+          </Button>
+        ) : (
+          <>
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={handleRetry}
+            >
+              Try again
+            </Button>
+            <Button
+              type="button"
+              variant="ghost"
+              size="xs"
+              onClick={handleRefresh}
+            >
+              Refresh page
+            </Button>
+          </>
+        )}
+      </div>
     </div>
   );
 }

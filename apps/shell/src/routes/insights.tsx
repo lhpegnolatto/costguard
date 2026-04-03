@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy } from "react";
-import { RemoteSlot } from "@/components/remote-slot";
+import { createLazyRemote } from "@/components/remote-slot";
 
-const CrashedRemoteApp = lazy(() => import("insights/crashed"));
-const InsightsApp = lazy(() => import("insights/app"));
+const CrashedRemoteApp = createLazyRemote(() => import("insights/crashed"));
+const InsightsApp = createLazyRemote(() => import("insights/app"));
 
 export const Route = createFileRoute("/insights")({
   component: Index,
@@ -12,12 +11,8 @@ export const Route = createFileRoute("/insights")({
 function Index() {
   return (
     <>
-      <RemoteSlot>
-        <CrashedRemoteApp />
-      </RemoteSlot>
-      <RemoteSlot>
-        <InsightsApp />
-      </RemoteSlot>
+      <CrashedRemoteApp />
+      <InsightsApp />
     </>
   );
 }
