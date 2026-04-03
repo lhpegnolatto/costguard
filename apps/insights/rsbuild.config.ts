@@ -18,14 +18,7 @@ export default defineConfig({
         "./app": "./src/exposed/app.tsx",
         "./crashed": "./src/exposed/crashed.tsx",
       },
-      shared: {
-        react: {
-          singleton: true,
-        },
-        "react-dom": {
-          singleton: true,
-        },
-      },
+      shared: ["react", "react-dom"],
     }),
     withZephyr(),
   ],

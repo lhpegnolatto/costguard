@@ -24,14 +24,7 @@ export default defineConfig({
         analytics: `analytics@${ANALYTICS_REMOTE_URL}/mf-manifest.json`,
         insights: `insights@${INSIGHTS_REMOTE_URL}/mf-manifest.json`,
       },
-      shared: {
-        react: {
-          singleton: true,
-        },
-        "react-dom": {
-          singleton: true,
-        },
-      },
+      shared: ["react", "react-dom"],
     }),
     withZephyr(),
   ],
