@@ -1,0 +1,93 @@
+{
+  "kpis": {
+    "mtdSpendUsd": 287400,
+    "mtdSpendChangePct": 4.2,
+    "budgetVariancePct": -2.1,
+    "wasteEstimateUsd": 18400,
+    "commitmentCoveragePct": 67
+  },
+  "spendTrend": [
+    { "period": "2026-01-06", "spend": 61200, "forecast": 59800 },
+    { "period": "2026-01-13", "spend": 62800, "forecast": 60500 },
+    { "period": "2026-01-20", "spend": 64100, "forecast": 61800 },
+    { "period": "2026-01-27", "spend": 65500, "forecast": 63200 },
+    { "period": "2026-02-03", "spend": 66800, "forecast": 64500 },
+    { "period": "2026-02-10", "spend": 68200, "forecast": 65800 },
+    { "period": "2026-02-17", "spend": 69100, "forecast": 67100 },
+    { "period": "2026-02-24", "spend": 70400, "forecast": 68400 },
+    { "period": "2026-03-03", "spend": 71800, "forecast": 69800 },
+    { "period": "2026-03-10", "spend": 72100, "forecast": 70500 },
+    { "period": "2026-03-17", "spend": 72800, "forecast": 71200 },
+    { "period": "2026-03-24", "spend": 73400, "forecast": 71900 }
+  ],
+  "allocationByCategory": [
+    {
+      "name": "Compute",
+      "spendUsd": 124500,
+      "pctOfTotal": 42,
+      "trend": "up"
+    },
+    {
+      "name": "Storage",
+      "spendUsd": 52800,
+      "pctOfTotal": 18,
+      "trend": "flat"
+    },
+    {
+      "name": "Network",
+      "spendUsd": 44100,
+      "pctOfTotal": 15,
+      "trend": "down"
+    },
+    {
+      "name": "Databases",
+      "spendUsd": 38200,
+      "pctOfTotal": 13,
+      "trend": "up"
+    },
+    {
+      "name": "Other",
+      "spendUsd": 35800,
+      "pctOfTotal": 12,
+      "trend": "flat"
+    }
+  ],
+  "allocationByService": [
+    {
+      "name": "Amazon EC2",
+      "spendUsd": 89200,
+      "pctOfTotal": 30,
+      "trend": "up"
+    },
+    {
+      "name": "RDS",
+      "spendUsd": 35600,
+      "pctOfTotal": 12,
+      "trend": "up"
+    },
+    {
+      "name": "S3",
+      "spendUsd": 31200,
+      "pctOfTotal": 11,
+      "trend": "flat"
+    },
+    {
+      "name": "EKS",
+      "spendUsd": 28900,
+      "pctOfTotal": 10,
+      "trend": "up"
+    },
+    {
+      "name": "CloudFront",
+      "spendUsd": 21400,
+      "pctOfTotal": 7,
+      "trend": "down"
+    },
+    {
+      "name": "Lambda",
+      "spendUsd": 18900,
+      "pctOfTotal": 6,
+      "trend": "up"
+    }
+  ]
+}
