@@ -9,22 +9,13 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import {
-  LayoutDashboardIcon,
-  ListIcon,
   ChartAreaIcon,
-  FolderIcon,
-  UsersIcon,
-  CameraIcon,
-  FileTextIcon,
   Settings2Icon,
   CircleHelpIcon,
   SearchIcon,
-  DatabaseIcon,
-  FileChartColumnIcon,
   LightbulbIcon,
   ShieldIcon,
 } from "lucide-react";
@@ -38,12 +29,12 @@ const data = {
   navMain: [
     {
       title: "Analytics",
-      url: "#",
+      url: "/",
       icon: <ChartAreaIcon />,
     },
     {
       title: "Insights",
-      url: "#",
+      url: "/insights",
       icon: <LightbulbIcon />,
     },
   ],

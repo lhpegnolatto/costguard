@@ -1,6 +1,7 @@
 import { pluginModuleFederation } from "@module-federation/rsbuild-plugin";
 import { defineConfig } from "@rsbuild/core";
 import { pluginReact } from "@rsbuild/plugin-react";
+import { tanstackRouter } from "@tanstack/router-plugin/rspack";
 import { withZephyr } from "zephyr-rsbuild-plugin";
 
 export default defineConfig({
@@ -30,6 +31,16 @@ export default defineConfig({
     }),
     withZephyr(),
   ],
+  tools: {
+    rspack: {
+      plugins: [
+        tanstackRouter({
+          target: "react",
+          autoCodeSplitting: true,
+        }),
+      ],
+    },
+  },
   html: {
     template: "./src/index.html",
     title: "CostGuard",

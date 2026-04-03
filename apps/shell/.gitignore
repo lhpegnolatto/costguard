@@ -1,2 +1,6 @@
 # module federation
 @mf-types/
+
+# tanstack router
+routeTree.gen.ts
+routeTree.gen.d.ts
