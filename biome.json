@@ -8,6 +8,11 @@
   "files": {
     "includes": ["**", "!**/dist", "!**/node_modules"]
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "formatter": {
     "indentStyle": "space",
     "indentWidth": 2
