@@ -32,5 +32,7 @@ export default defineConfig({
   ],
   html: {
     template: "./src/index.html",
+    title: "CostGuard",
+    favicon: "./public/favicon.svg",
   },
 });
