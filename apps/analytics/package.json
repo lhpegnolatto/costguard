@@ -1,5 +1,5 @@
 {
-  "name": "@costguard/shell",
+  "name": "@costguard/analytics",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -23,8 +23,5 @@
     "tailwindcss": "^4.2.2",
     "typescript": "^6.0.2",
     "zephyr-rsbuild-plugin": "^0.2.0"
-  },
-  "zephyr:dependencies": {
-    "analytics": "@costguard/analytics@*"
   }
 }

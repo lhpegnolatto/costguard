@@ -5,14 +5,17 @@ import { withZephyr } from "zephyr-rsbuild-plugin";
 
 export default defineConfig({
   server: {
-    port: 3000,
+    port: 3001,
+  },
+  output: {
+    assetPrefix: "auto",
   },
   plugins: [
     pluginReact(),
     pluginModuleFederation({
-      name: "shell",
-      remotes: {
-        analytics: "analytics@http://localhost:3001/mf-manifest.json",
+      name: "analytics",
+      exposes: {
+        "./app": "./src/exposed/app.tsx",
       },
       shared: {
         react: {

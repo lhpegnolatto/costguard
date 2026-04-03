@@ -1,16 +1,15 @@
 {
   "name": "costguard",
   "private": true,
-  "packageManager": "pnpm@10.13.1",
   "scripts": {
-    "dev": "pnpm --filter shell dev",
-    "build": "pnpm --filter shell build",
-    "preview": "pnpm --filter shell preview",
+    "dev": "pnpm -r --parallel --filter \"./apps/*\" dev",
+    "build": "pnpm -r --parallel --filter \"./apps/*\" build",
+    "preview": "pnpm -r --parallel --filter \"./apps/*\" preview",
     "lint": "biome check .",
     "format": "biome format --write .",
     "check": "biome check --write ."
   },
   "devDependencies": {
-    "@biomejs/biome": "latest"
+    "@biomejs/biome": "^2.4.10"
   }
 }
