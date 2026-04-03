@@ -13,7 +13,7 @@ export default defineConfig({
   plugins: [
     pluginReact(),
     pluginModuleFederation({
-      name: "insights",
+      name: "costguard_insights",
       exposes: {
         "./app": "./src/exposed/app.tsx",
         "./crashed": "./src/exposed/crashed.tsx",

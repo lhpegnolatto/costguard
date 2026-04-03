@@ -16,10 +16,12 @@ export default defineConfig({
   plugins: [
     pluginReact(),
     pluginModuleFederation({
-      name: "shell",
+      name: "costguard_shell",
       remotes: {
-        analytics: "analytics@http://localhost:3001/mf-manifest.json",
-        insights: "insights@http://localhost:3002/mf-manifest.json",
+        costguard_analytics:
+          "costguard_analytics@http://localhost:3001/mf-manifest.json",
+        costguard_insights:
+          "costguard_insights@http://localhost:3002/mf-manifest.json",
       },
       shared: {
         react: {

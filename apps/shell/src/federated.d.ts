@@ -1,16 +1,16 @@
-declare module "analytics/app" {
+declare module "costguard_analytics/app" {
   import type { ComponentType } from "react";
   const App: ComponentType;
   export default App;
 }
 
-declare module "insights/app" {
+declare module "costguard_insights/app" {
   import type { ComponentType } from "react";
   const App: ComponentType;
   export default App;
 }
 
-declare module "insights/crashed" {
+declare module "costguard_insights/crashed" {
   import type { ComponentType } from "react";
   const Crashed: ComponentType;
   export default Crashed;

@@ -1,5 +1,5 @@
 {
-  "name": "costguard-shell",
+  "name": "costguard_shell",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -35,7 +35,7 @@
     "zephyr-rsbuild-plugin": "^0.2.0"
   },
   "zephyr:dependencies": {
-    "analytics": "costguard-analytics@*",
-    "insights": "costguard-insights@*"
+    "costguard_analytics": "costguard_analytics@*",
+    "costguard_insights": "costguard_insights@*"
   }
 }
